@@ -1,0 +1,200 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('фонфон.png') center/cover no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    line-height: 1.6;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+/* Плавающая верхняя панель */
+.floating-nav {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    right:25px;
+    height: 95px;
+    background-color: #434343;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+/* Центральные ссылки */
+.nav-links {
+    display: flex;
+    gap: 100px;
+    top: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Кнопка авторизации */
+.nav-auth {
+    margin-left: auto;
+    font-family: 'Montserrat';
+}
+
+.auth-btn {
+    background: #2C2C2C; /* Полупрозрачный черный */
+    width: 228px;
+    height: 75px;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 29px;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    right: 170px;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+}
+
+.auth-btn:hover {
+    background: rgba(0, 0, 0, 0.7); /* Менее прозрачный при наведении */
+    transform: translateY(-50%) translateY(-6px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Контейнер для карточек */
+.cards-wrapper {
+    position: relative;
+    font-family: 'Montserrat';
+}
+
+/* Общие стили для карточек */
+.card {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачные карточки */
+    color: white;
+    outline: 0.1px solid white;;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    position: absolute;
+}
+
+.card-1 {
+    width: 321px;
+    height:283.05322265625px;
+    top: 245px;
+    left: 120px;
+}
+
+.card-2 {
+    width: 321px;
+    height:283.05322265625px;
+    top: 181px;
+    left: 500px;
+}
+
+.card-3 {
+    width: 321px;
+    height:283.05322265625px;
+    top: 245px;
+    left: 880px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для заголовков в карточках */
+.card h1 {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+}
+.nav-logo img {
+    height: 78.62881902172137px;
+    transform: rotate(17.92deg);
+    width: 96.66447217429716px;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%) rotate(17.92deg);
+    }
+
+.white-line {
+    position: absolute;
+    top: 650px;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
